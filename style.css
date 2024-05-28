@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -29,11 +30,12 @@ header a {
 header ul {
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 header li {
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
 }
 
 header .profile-img {
@@ -41,7 +43,12 @@ header .profile-img {
     height: 150px;
     border-radius: 50%;
     display: block;
-    margin: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+header .profile-img:hover {
+    transform: scale(1.1);
 }
 
 header h1, header p {
@@ -49,10 +56,13 @@ header h1, header p {
 }
 
 #about, #projects, #contact {
-    padding: 20px;
+    padding: 60px 0;
     background: #fff;
     margin-top: 20px;
     border: #e6e6e6 1px solid;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
 }
 
 #about h2, #projects h2, #contact h2 {
@@ -94,4 +104,24 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in.appear {
+    animation: fadeInUp 0.6s forwards;
 }
