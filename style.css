@@ -4,6 +4,7 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 .container {
@@ -18,6 +19,8 @@ header {
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #77b300 3px solid;
+    position: relative;
+    z-index: 2;
 }
 
 header a {
@@ -25,6 +28,19 @@ header a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+    color: #77b300;
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header a:active {
+    color: #fff;
+    background-color: #555;
 }
 
 header ul {
@@ -83,7 +99,7 @@ header h1, header p {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 300px;
     text-align: center;
 }
@@ -96,6 +112,26 @@ header h1, header p {
 
 .project-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item a:hover,
+.project-item a:focus-visible {
+    color: #77b300;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item a:active {
+    color: #555;
+    background-color: #e6e6e6;
 }
 
 footer {
@@ -104,11 +140,26 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    color: #77b300;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link:active {
+    color: #555;
+    background-color: #e6e6e6;
 }
 
 @keyframes fadeInUp {
