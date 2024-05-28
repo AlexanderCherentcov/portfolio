@@ -59,6 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
         appearOnScroll.observe(fader);
     });
 });
-        projectGrid.appendChild(projectItem);
-    });
-});
+
