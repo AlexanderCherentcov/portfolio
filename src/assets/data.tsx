@@ -1,3 +1,4 @@
+import React from 'react';
 import { LinkProps } from '@/components/links/Link';
 import { ProjectProps } from '@/components/linksProject/LinkProject';
 import { TelegramIcon, WhatsappIcon, MailIcon } from '@/assets/img/icon/Icon';

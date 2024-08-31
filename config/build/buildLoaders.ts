@@ -73,11 +73,5 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 
   const babelLoader = buildBabelLoaders(options);
 
-  return [
-    assetLoader,
-    scssLoader,
-    // tsLoader,
-    babelLoader,
-    svgrLoader,
-  ];
+  return [assetLoader, scssLoader, tsLoader, babelLoader, svgrLoader];
 }
