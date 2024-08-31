@@ -98,7 +98,7 @@ export const projectsData: ProjectProps[] = [
     title: 'Portfolio',
     description:
       'Этот сайт представляет мой первый опыт работы с React и Webpack, демонстрируя мой путь в современную веб-разработку. Сайт предназначен для того, чтобы показать мои навыки, проекты и достижения. (React, SCSS, JS)',
-    link: 'https://github.com/AlexanderCherentcov/CRM.git',
+    link: 'https://alexandercherentcov.github.io/portfolio/',
     img: Portfolio,
   },
 ];
